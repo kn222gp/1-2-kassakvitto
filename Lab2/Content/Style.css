@@ -1,0 +1,39 @@
+﻿body {
+
+}
+#ReceiptDiv{
+    margin-top:20px;
+    background-color:lightgray;
+    border:1px solid black;
+    width:250px;
+}
+
+#ReceiptDiv h2{
+    width:100px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    border-bottom:1px solid black;
+}
+
+#infoDiv{
+    text-align:center;
+    border-bottom:1px dashed black;
+}
+
+#buyDiv{
+    margin-left:10px;
+}
+#infoDiv p{
+    margin-top:-20px;
+}
+
+
+.labels{
+    float:right;
+    margin-right: 10px;
+}
+
+.errors{
+    color:red;
+}

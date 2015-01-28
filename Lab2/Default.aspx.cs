@@ -11,15 +11,24 @@ namespace Lab2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            var recieptDiv = ReceiptDiv;
-            recieptDiv.Visible = false;
+            InputTextBox.Focus();
         }
 
         protected void SendButton_Click(object sender, EventArgs e)
         {
-            var input = InputTextBox.Text;
-            Model.Receipt receipt = new Model.Receipt();
-            
+            double input = double.Parse(InputTextBox.Text);
+            Model.Receipt receipt = new Model.Receipt(input);
+            receipt.Calculate(input);
+
+
+            TotalSumLabel.Text = string.Format("{0:c}", receipt.Subtotal);
+            DiscountPercentLabel.Text = string.Format("{0:p}", receipt.DiscountRate);
+            TotalDiscountLabel.Text = string.Format("{0:c}", receipt.MoneyOff);
+            PayLabel.Text = string.Format("{0:c}", receipt.Total);
+
+            ReceiptDiv.Visible = true;
+
+ 
         }
     }
 }

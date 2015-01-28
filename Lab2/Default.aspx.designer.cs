@@ -49,6 +49,24 @@ namespace Lab2 {
         protected global::System.Web.UI.WebControls.Label ValutaTextBox;
         
         /// <summary>
+        /// RequiredFieldValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        
+        /// <summary>
+        /// CompareValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator1;
+        
+        /// <summary>
         /// SendButton control.
         /// </summary>
         /// <remarks>
@@ -85,21 +103,21 @@ namespace Lab2 {
         protected global::System.Web.UI.WebControls.Label DiscountPercentLabel;
         
         /// <summary>
-        /// TotalDiscount control.
+        /// TotalDiscountLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label TotalDiscount;
+        protected global::System.Web.UI.WebControls.Label TotalDiscountLabel;
         
         /// <summary>
-        /// Pay control.
+        /// PayLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Pay;
+        protected global::System.Web.UI.WebControls.Label PayLabel;
     }
 }

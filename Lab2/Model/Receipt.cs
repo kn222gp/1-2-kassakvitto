@@ -12,6 +12,7 @@ namespace Lab2.Model
         public Receipt(double subtotal)
         {
 
+            
         }   
 
         public double DiscountRate
@@ -32,11 +33,18 @@ namespace Lab2.Model
         {
             get
             {
-                return Subtotal;
+                return _subtotal;
             }
             set
             {
-                _subtotal = value;
+                if(value < 0 )
+                {
+                    throw new ArgumentOutOfRangeException();
+                }
+                else
+                {
+                    _subtotal = value;
+                }
                 
             }
         }
@@ -50,7 +58,32 @@ namespace Lab2.Model
 
         public void Calculate (double subtotal)
         {
-            _subtotal = subtotal;
+            Subtotal = subtotal;
+
+            if(subtotal < 500)
+            {
+                DiscountRate = 0;
+            }
+
+            else if(subtotal < 1000)
+            {
+                DiscountRate = 0.05;
+            }
+
+            else if(subtotal < 5000)
+            {
+                DiscountRate = 0.10;
+            }
+
+            else
+            {
+                DiscountRate = 0.15;
+            }
+
+            MoneyOff = Subtotal * DiscountRate;
+            Total = Subtotal - MoneyOff;
+
+            
         }
 
         
